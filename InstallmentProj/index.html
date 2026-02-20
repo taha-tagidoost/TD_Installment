@@ -6,45 +6,52 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>installmentproj</title>
+  <link rel="stylesheet" href="./components/_Installment.scss">
 </head>
 
 <body>
 
-  <div id="modal">
+  <div id="modal" class="modalRoot">
 
+    <div class="modalContentWrapper">
+      <div class="installmentContainer">
+        <div class="installmentTitle"></div>
 
-    <div class="content">
-      <div class="InstallmentContainer">
-        <div class="titleS">
+        <div class="installmentLayout">
+          <div class="installmentRight">
+            <div class="installmentRightContent installmentHeadline">
 
-        </div>
-        <div class="rlContainer">
-          <div class="rightS">
-            <div class="rightContent">
-              <div class="payContainer">
-                <div class="payTextContainer">
-                  <div class="circle"></div>
-                  <div class="paytext"></div>
+              <div class="installmentPayItem">
+                <div class="installmentPayText">
+                  <div class="installmentCircle"></div>
+                  <div class="installmentText">
+                    سلام خب
+                  </div>
                 </div>
               </div>
-              <div class="payContainer">
-                <div class="payTextContainer">
-                  <div class="circle"></div>
-                  <div class="paytext"></div>
+
+              <div class="installmentPayItem installmentHeadline">
+                <div class="installmentPayText">
+                  <div class="installmentCircle"></div>
+                  <div class="installmentText"></div>
                 </div>
               </div>
+
+              <div class="installmentExtraContent"></div>
+
             </div>
           </div>
-          <div class="leftS"></div>
+
+          <div class="installmentLeft"></div>
         </div>
       </div>
     </div>
 
-    <div id="closeModal" class="overlay"></div>
+    <div id="closeModal" class="modalOverlay"></div>
   </div>
 
   <script type="module" src="/src/main.js"></script>
-  <script src="'/src/modal.js"></script>
+  <script src="/src/modal.js"></script>
 </body>
 
 </html>

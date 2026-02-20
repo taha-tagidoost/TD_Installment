@@ -1,0 +1,113 @@
+@import "./newHeadLine" ;
+
+
+body{
+    direction: rtl;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// ===== Variables =====
+$primary: #2563eb;
+$gray-100: #f3f4f6;
+$gray-400: #9ca3af;
+$dark: #111827;
+$radius: 12px;
+
+// ===== Modal =====
+.modalRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modalOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+  }
+
+  .modalContentWrapper {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: $radius;
+    padding: 24px;
+  }
+}
+
+// ===== Installment =====
+.installmentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .installmentTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  .installmentLayout {
+    display: flex;
+    gap: 32px;
+
+    .installmentRight,
+    .installmentLeft {
+      flex: 1;
+    }
+
+    .installmentRightContent {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+// ===== Pay Items =====
+.installmentPayItem {
+  background: $gray-100;
+  border-radius: $radius;
+  padding: 16px;
+
+  &.installmentHeadline {
+    border-left: 4px solid $primary;
+  }
+
+  .installmentPayText {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .installmentCircle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $primary;
+      flex-shrink: 0;
+    }
+
+    .installmentText {
+      font-size: 0.95rem;
+      color: $dark;
+    }
+  }
+}
+
+// ===== Extra Content =====
+.installmentExtraContent {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: $gray-400;
+}
